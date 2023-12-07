@@ -1,0 +1,11 @@
+(library
+ (name absint))
+
+(env
+    (dev
+      (flags (:standard -warn-error -A))))
+
+(ocamllex lexer)
+(menhir 
+ (modules parser)
+ (flags --explain))
